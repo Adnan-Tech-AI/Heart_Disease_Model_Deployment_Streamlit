@@ -54,8 +54,8 @@ if prevalentHyp=="Yes":
 else:
     prevHyp=0
 
-
-if st.button("Predict"):
+try:
+    if st.button("Predict"):
 
         X=[[sex,age,smoke,cigsPerDay,BPMedicine,prevStroke,prevHyp,diab,totChol,sysBP,diaBP,BMI,heartRate]]
         model = joblib.load("model.h5")
@@ -64,4 +64,5 @@ if st.button("Predict"):
             st.success("The patient is not at risk of heart disease")
         else:
             st.success("The patient is at risk of heart disease in next ten years, we suggest to make lifestyle changes")
-
+except NameError:
+    st.exception("Fill all!")
