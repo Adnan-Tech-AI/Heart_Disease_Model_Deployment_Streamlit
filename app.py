@@ -5,7 +5,6 @@ import sklearn
 import joblib
 
 
-st.image("nsakcet logo.jpg", width=200)
 
     
 st.markdown("<h2 style='text-align:center;font-weight:bold;font-family:Lora;'>Heart Disease Prediction Model</h2>",unsafe_allow_html=True)
