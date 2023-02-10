@@ -55,15 +55,13 @@ else:
     prevHyp=0
 
 
-X=[[sex,age,smoke,cigsPerDay,BPMedicine,prevStroke,prevHyp,diab,totChol,sysBP,diaBP,BMI,heartRate]]
-
-
-
-model = joblib.load("model.h5")
 if st.button("Predict"):
-    prediction=model.predict(X)
-    if prediction==[0]:
-        st.success("The patient is not at risk of heart disease")
-    else:
-        st.success("The patient is at risk of heart disease in next ten years, we suggest to make lifestyle changes")
+
+        X=[[sex,age,smoke,cigsPerDay,BPMedicine,prevStroke,prevHyp,diab,totChol,sysBP,diaBP,BMI,heartRate]]
+        model = joblib.load("model.h5")
+        prediction=model.predict(X)
+        if prediction==[0]:
+            st.success("The patient is not at risk of heart disease")
+        else:
+            st.success("The patient is at risk of heart disease in next ten years, we suggest to make lifestyle changes")
 
