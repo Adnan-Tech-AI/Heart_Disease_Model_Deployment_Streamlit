@@ -13,7 +13,7 @@ gender = st.radio("Enter Your Gender",["Male","Female"])
 age =st.slider("Enter Your Age",min_value=1,max_value=100)
 currentSmoker = st.radio("Are you a smoker",["No","Yes"])
 if currentSmoker=="Yes":
-    cigsPerDay=st.number_input("How Many ciggarettes per day",step=1)
+    cigsPerDay=st.number_input("How Many ciggarettes per day",step=1) or 0
 BPMeds=st.radio("Do you take BP Medicines",["Yes","No"])
 prevalentStroke=st.radio("Do you have any prevalent stroke",["Yes","No"])
 prevalentHyp=st.radio("Do you have any prevalent Hypertension",["Yes","No"])
